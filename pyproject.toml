@@ -4,13 +4,19 @@ version = "0.1.0"
 description = ""
 authors = ["Radik Agliamov <aglyam92@mail.ru>"]
 readme = "README.md"
+packages = [{include = "tsn"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
 fastapi = "^0.115.11"
 requests = "^2.32.3"
+pydantic-settings = "^2.8.1"
+uvicorn = "^0.34.0"
 
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+app = "tsn.main:start"
